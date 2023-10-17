@@ -17,7 +17,7 @@ public class Quiz02 {
 		// 총 결제해야 할 금액을 계산하고
 		// 더치페이로 1인당 얼마을 내야 하는지 계산하여 출력하는 프로그램을 작성하시오
 		
-		
+	/*	
 		int beef = 8500; // 삼겹살 1인분 가격
 		
 		int su = 4500, be = 5000; // 소주와 맥주 각 한 병의 가격
@@ -43,15 +43,10 @@ public class Quiz02 {
 		pay = sum /2;
 		System.out.printf("1인당 내야할 금액은 %d입니다\n", pay);
 		
-	
-		
-		
-		
-		
-		
-		
+	*/
+										
 /*		
-		
+	cht gpt	
 
 import java.util.Scanner;
 
@@ -84,9 +79,31 @@ public class Main {
 }
 		
 */
+		// 풀이 
+		
+		Scanner sc = new Scanner(System.in);
+
+		int totoalPrice, dutchPay;
+		int meatPrice = 8500;
+		int soju = 4500, beer = 5000;
+		int addmit;
 		
 		
+		System.out.println("우리 식당에서는 기본 삼겹살 3인분으로 시작합니다");
+		System.out.println("삼겹살 3인분, 소주 1병, 맥주 1병 주문되었습니다");
+		System.out.println("삼겹살 추가 주문량을 입력하세요 :");
+		addmit = sc.nextInt();
+
 		
+		totoalPrice = (meatPrice * 3) + (soju * 1) + (beer * 1);
+		totoalPrice += addmit * meatPrice;
+		dutchPay =  totoalPrice /2;
+		
+		
+		System.out.printf("총 금액 : %,d원\n", totoalPrice);
+		System.out.printf("1인당 결제할 금액 :  %,d원", dutchPay );
+		
+		sc.close();
 		
 		
 		
