@@ -27,7 +27,7 @@ public class Ex09 {
 		System.out.println();
 
 		// 3) 다른 변수를 만들어두고 1부터 25까지 5 X 5 크기로 출력
-
+		
 		int num = 1;
 
 		for (int i = 0; i < 5; i++) {
