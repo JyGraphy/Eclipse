@@ -106,7 +106,9 @@ public class Quiz01 {
 		System.out.println();
 		
 		// 함수 호출 코드에 마우스를 올려보세요
+		// 함수 호출 코드에 마우스를 올린 상태로 컨트롤 클릭하면 함수의 정의로 이동한다
 		int test = Integer.parseInt("1234");
+		// int 타입 parseInt를 사용하면 문자열도 int으로 반환된다
 		
 		
 		
