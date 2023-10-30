@@ -66,10 +66,11 @@ public class Quiz01 {
 		
 		for (int i = 0; i < ns.length; i++) {
 			sn[i] += ns[i];
+			
 			System.out.printf("%2d, ",sn[i]);
-			if (i == 5) {
-				System.out.println("");
-			}
+			
+			
+			
 		}
 		System.out.println();
 		
