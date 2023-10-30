@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Ex08 {
-
+	
 	static void selectionSort(int [] arr) {
 		for (int i = 0; i < arr.length -1; i++) {
 			for (int j = i+1; j < arr.length; j++) {
@@ -18,12 +18,20 @@ public class Ex08 {
 	}
 	
 	
+	static void plus(int num) {
+		num +=1;
+	}
 	
 	
 	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		int n1 = 5;
+		System.out.println("n1 :" + n1);
+		plus(n1);
+		System.out.println("n1 :" + n1);
 	
 		Random ran = new Random();
 		int[] arr = new int[1000000];
