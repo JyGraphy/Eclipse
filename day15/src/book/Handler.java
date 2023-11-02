@@ -16,7 +16,7 @@ public class Handler {
 			if (arr[i] == null) {
 				
 				arr[i] = new Handler();
-				arr[i].setName(name);
+//				arr[i].setName(name);
 				
 			}
 		}
