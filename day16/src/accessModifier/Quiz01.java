@@ -41,6 +41,10 @@ class Member {
 
 
 public class Quiz01 {
+	
+//	결론 : 객체와 객체는 직접적인 비교가 힘들기 때문에
+//	특정 필드값을 기준으로 정렬해야한다
+//	primitrve 타입이거나, compareTo 함수가 있는 자료형으로 기준을 선정한다(String)
 
 	
 	private static final String[] Member = null;
