@@ -1,10 +1,12 @@
 package book5;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 //	데이터 저장소를 (배열 -> 리스트 -> 파일 -> DB) 를 직접 참조하거나, 연결할 수 있음
 
@@ -43,7 +45,7 @@ public class Handler {
 				String publisher = ob.getPublisher();
 				String price = String.valueOf(ob.getPrice());
 
-				String data = String.format("%s %s %s %s", name, author, publisher, price);
+				String data = String.format("%s, %s, %s, %s", name, author, publisher, price);
 				osw.write(data);
 				osw.write('\n');
 			}
@@ -54,6 +56,30 @@ public class Handler {
 			e.printStackTrace();
 		}
 
+	}
+
+	public void load() {
+		try {
+			Scanner sc = new Scanner(f);
+			String data = "";
+			while (sc.hasNextLine()) {
+				data = sc.nextLine();
+				if (data.length() != 0) {
+					String[] arr = data.split(",");
+					Book b = new Book();
+					b.setName(arr[0]);
+					b.setAuthor(arr[1]);
+					b.setPublisher(arr[2]);
+					b.setPrice(Integer.parseInt(arr[3]));
+					list.add(b);
+
+				}
+			}
+			sc.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
 	}
 
 	public void showList() {
