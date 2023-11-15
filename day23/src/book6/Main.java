@@ -1,4 +1,4 @@
-package book5;
+package book6;
 
 import java.util.Scanner;
 
@@ -9,8 +9,8 @@ public class Main {
 //	case2의 입력부분, Scanner를 매개변수로 전달받아서 객체를 생성하고, 그 객체를 반환하는 함수
 //	사용자 입력값으로 객체를 구성하여 그 객체를 반환하는 함수
 
-	static Book getBookFromUsetInput(Scanner sc) {
-		Book book = new Book();
+	static BookDTO getBookFromUsetInput(Scanner sc) {
+		BookDTO book = new BookDTO();
 		String name, author, publisher;
 		int price;
 
@@ -40,7 +40,7 @@ public class Main {
 //		Book 클래스의 피드값을 입력받거나 출력을 위해
 //		지역변수를 만들어두는 편이 좋다
 		Handler handler = new Handler();
-		Book book = null; // 추가 수정 삭제 검색에서 사용할 객체를 받기 위한 함수
+		BookDTO book = null; // 추가 수정 삭제 검색에서 사용할 객체를 받기 위한 함수
 		Scanner sc = new Scanner(System.in);
 		String name;
 		int row; // 추가 및 삭제가 정상적으로 수행되었는지 확인하기 위한 변수
@@ -53,7 +53,6 @@ public class Main {
 
 //					같이 묶어서 생각
 //		입력 및 출력 ( [자료형 + 대입] , 제어문 + 연산자 활용)
-		handler.load();
 		MAIN: while (true) {
 
 			// 입력
@@ -93,7 +92,6 @@ public class Main {
 				
 
 			case 0: // 종료하기 전에 저장하고 종료
-				handler.save(); // 종료를 눌러야 엑셀 파일에 정보가 기록된다 / 저장하지 않으면 실시간 데이터 저장 하기 힘듬
 
 				break MAIN;
 			}
